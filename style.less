@@ -1,0 +1,82 @@
+/*
+ * wellnr-application-layout-css
+ *
+ * This is a small CSS project which enables you to easily create desktop application like UIs.
+ *
+ * Copyright 2014 Michael Wellner.
+ *
+ * All rights reserved. Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@headerHeight: 	50px;
+@footerHeight: 	2em;
+
+.app, .app-expand {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.app-row,
+.app-col {
+	overflow: hidden;
+}
+
+.app-header,
+.app-footer {
+	overflow: show; // To allow dropdown menus etc. ...
+}
+
+.app-row, 
+.app-header, 
+.app-footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.app-col {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.app-header {
+	height: @headerHeight;
+	top: 0;
+}
+
+.app-header~.app-col,
+.app-header~.app-expand {
+	top: @headerHeight;
+}
+
+.app-footer {
+	height: @footerHeight;
+	bottom: 0;
+}
+
+.app-footer~.app-col,
+.app-footer~.app-expand {
+	bottom: @footerHeight;
+}
+
+.scroll-x {
+	overflow-x: auto;
+}
+
+.scroll-y {
+	overflow-y: auto;
+}
